@@ -1,0 +1,21 @@
+.header{
+    background-color: aliceblue;
+    color: #ffffff;
+    height: 170px;
+    margin-top: 50px;
+    border-radius: 25px;
+}
+.imageblock{
+    height: 100%;
+}
+.timeline{
+ font-size: large;
+ color: cadetblue;
+}
+
+.profileblock{
+    margin-top: 10px;
+}
+.thumbnail{
+    margin-top: 19px;
+}

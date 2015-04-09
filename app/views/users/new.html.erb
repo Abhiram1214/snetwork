@@ -1,0 +1,42 @@
+<h4><strong>sign up</strong></h4>
+
+<%= form_for @new_user do |f| %>
+    <div class="control-group">
+      <%= f.label :name %>
+      <div class="controls">
+        <%= f.text_field :name, class: 'form-control' %><br /><br />
+      </div>
+    </div>
+
+    <div class="control-group">
+      <%= f.label :email %>
+      <div class="controls">
+        <%= f.text_field :email, class: 'form-control' %><br /><br />
+      </div>
+    </div>
+
+    <div class="control-group">
+      <%= f.label :username %>
+      <div class="controls">
+        <%= f.text_field :username, class: 'form-control' %><br /><br />
+      </div>
+    </div>
+
+    <div class="control-group">
+      <%= f.label :password %>
+      <div class="controls">
+        <%= f.password_field :password, class: 'form-control' %><br /><br />
+      </div>
+    </div>
+
+    <div class="control-group">
+      <%= f.label :password_confirmation %>
+      <div class="controls">
+        <%= f.password_field :password_confirmation, class: 'form-control' %><br /><br />
+      </div>
+    </div>
+
+    <div class="form-actions">
+      <%= f.button :submit,:class=>"btn btn-xs btn-success" %>
+    </div>
+<%end%>

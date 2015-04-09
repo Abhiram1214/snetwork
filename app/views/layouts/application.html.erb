@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Snetwork</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<div id="navigation">
+   <% if current_user %>
+      Logged in as : <%= current_user.name %>
+      <%= link_to "Logout", session_path(:id=>current_user),method: :delete %>
+  <%else%>
+      <%= link_to "Login", new_session_path %>
+  <%end%>
+</div>
+
+<%= yield %>
+
+</body>
+</html>

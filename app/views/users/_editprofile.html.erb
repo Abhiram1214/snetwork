@@ -1,0 +1,42 @@
+
+
+<div class="editprofile">
+  <%= form_for @edit_profile,url:user_path(@edit_profile) do |f| %>
+      <fieldset>
+
+        <div class="control-group">
+          <%= f.label :name %>
+          <div class="controls">
+            <%= f.text_field :name, class: 'form-control' %><br /><br />
+          </div>
+        </div>
+
+        <div class="control-group">
+          <%= f.label :age %>
+          <div class="controls">
+            <%= f.text_field :age,class: 'form-control' %><br /><br />
+          </div>
+        </div>
+
+        <div class="control-group">
+          <%= f.label :about %>
+          <div class="controls">
+            <%= f.text_field :about,class: 'form-control' %><br /><br />
+          </div>
+        </div>
+
+        <div class="control-group">
+
+          <div class="controls">
+            <%= f.file_field :avatar,class: 'form-control' %><br /><br />
+          </div>
+        </div>
+
+        <% hidden_field_tag :avatar%>
+        <div class="form-actions">
+          <%= f.button :submit,:class=>"btn btn-xs btn-success" %>
+        </div>
+      </fieldset>
+
+  <%end%>
+</div>

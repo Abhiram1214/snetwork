@@ -1,0 +1,5 @@
+<%= form_for @image_upload, :html =>{:multipart=>true} do |image| %>
+  <%= image.file_field :avatar %>
+    <%= image.submit %>
+<%end%>
+

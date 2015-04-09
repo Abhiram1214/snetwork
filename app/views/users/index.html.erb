@@ -1,0 +1,54 @@
+<div class="container">
+    <div class="row header">
+      <div class="col-md-2 imageblock">
+        <div class="thumbnail">
+          <%= image_tag @imagefile.avatar.thumb.url %>
+        </div>
+      </div>
+      <div class="col-md-8 col-md-offset-1 timeline ">
+         <div class="row profileblock">
+           <div class="row">
+              <h4> <%=@user_profile.name%></h4>
+           </div>
+             <div class="row">
+               <h4><%=@user_profile.about%></h4>
+             </div>
+           </div>
+        <hr />
+
+        <%= link_to 'create profile', new_profile_path,:class => "profile" %>
+        <%= link_to 'Update Profile', edit_user_path(:id=>@user_profile.id),:remote=>true %>
+        <%= link_to 'Index', users_path %>
+
+
+      </div>
+    </div>
+
+  <div id="bodydisplay">
+
+
+  </div>
+     <div id="modaldisplay">
+            <div class="modal fade" id="formmodal" tabindex="-1" role="dialog" aria-labelledby="test results" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              </div>
+              <h4 class="modal-title">New Post</h4>
+
+              <div class="modal-body">
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+     </div>
+
+
+</div>
+
+
+
+
